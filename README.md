@@ -1,2 +1,8 @@
 # Candy
 Candy is a Dynamic Entity REST API Generator
+
+The idea is that the generated endpoints will be proper REST endpoints, with a WAD for discovery and documentation and with ou without authentication (basic or ldap).
+
+The UI will be web based and it will be used to define the entities and specify security methods.
+
+The first version will not be able to create relationships between entities but this will be done in versions further down the road...
