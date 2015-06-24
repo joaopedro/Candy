@@ -15,4 +15,4 @@ SugarCRM is a great product and very dynamic CRM... but it is, in its core, a CR
 
 ## The theme song
 
-![Get the theme song...](/CandyIggyPop.ogg?raw=true "Theme Song")
+** <a href="/CandyIggyPop.ogg?raw=true">Get the theme song...</a>
