@@ -17,6 +17,5 @@ SugarCRM is a great product and very dynamic CRM... but it is, in its core, a CR
 
 <a href="/CandyIggyPop.ogg?raw=true">Get the theme song...</a>
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<a href="https://www.youtube.com/watch?v=6bLOjmY--TA&t=2m18s" target="_blank"><img src="https://www.youtube.com/watch?v=6bLOjmY--TA/0.jpg" 
+alt="The theme song video" width="240" height="180" border="10" /></a>
