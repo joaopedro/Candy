@@ -12,3 +12,7 @@ The first version will not be able to create relationships between entities but 
 I recently came to work for a company that used a opensource project called "SugarCRM" has a way to very quickly and with low costs setup a dynamic entity management backoffice with a rest and soap api.
 
 SugarCRM is a great product and very dynamic CRM... but it is, in its core, a CRM. The ideia with Candy is to make a dynamic entity manager with a rest api that everyone could use to setup a serverside enpoint in minutes for mobile and front-end development.  
+
+## The theme song
+
+![Get the theme song...](/CandyIggyPop.ogg?raw=true "Theme Song")
