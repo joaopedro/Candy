@@ -55,13 +55,11 @@ Than create a instance of that entity:
 
 And that's it. You can see a list of instances of the "sample" entity with ```curl http://localhost:8080/api/sample``` or access a instance directly via its id with ```curl http://localhost:8080/api/sample/0```. 
 
-Contributing
-============
+##Contributing
 
 [CONTRIBUTING](https://en.wikipedia.org/wiki/Open-source_movement).
 
-License
-================
+##License
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
 
 ## The Theme Song
