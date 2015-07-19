@@ -25,11 +25,11 @@ On the front-end we are using angularJS to consume the REST endpoints we are exp
 
 Just install java 8 and maven. Download or clone the project and in the root directory run:
 
-mvn clean package
+```mvn clean package```
 
 Than go to the target directory run:
 
-java -jar candy-0.0.1-SNAPSHOT.jar
+```java -jar candy-0.0.1-SNAPSHOT.jar```
 
 And access the project from http://localhost:8080
 
@@ -37,6 +37,7 @@ There are two REST api's available in the project. One accessible under http://l
 
 To try the REST api you can use curl and do something like this to create the dynamic entity :
 
+```
 curl -X POST http://localhost:8080/manage/entity --header "Content-Type:application/json" -d '{"friendlyName": "sample", "physicalName": "cndy_sample",
     "fields": [{"friendlyName": "id", "physicalName": "cndy_fld_id", "type": "NUMBER", "fieldId":true, "fieldIdentity":true},
     {"friendlyName": "field1", "physicalName": "cndy_fld_field1", "type": "NUMBER"},
@@ -47,12 +48,12 @@ curl -X POST http://localhost:8080/manage/entity --header "Content-Type:applicat
     {"friendlyName": "field6", "physicalName": "cndy_fld_field6", "type": "STRING"}
     ]
 } '
-
+```
 Than create a instance of that entity:
 
-curl -X POST http://localhost:8080/api/sample --header "Content-Type:application/json" -d '{"field2": "value1", "field4": "value2"}'
+```curl -X POST http://localhost:8080/api/sample --header "Content-Type:application/json" -d '{"field2": "value1", "field4": "value2"}'```
 
-And that's it. You can see a list of instances of the "sample" entity with curl http://localhost:8080/api/sample or access a instance directly via its id with curl http://localhost:8080/api/sample/0. 
+And that's it. You can see a list of instances of the "sample" entity with ```curl http://localhost:8080/api/sample``` or access a instance directly via its id with ```curl http://localhost:8080/api/sample/0```. 
 
 
 
