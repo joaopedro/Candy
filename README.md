@@ -33,7 +33,7 @@ Than go to the target directory run:
 
 And access the project from http://localhost:8080
 
-There are two REST api's available in the project. One accessible under http://localhost:8080/manage with a alps descriptor http://localhost:8080/manage/alps. And another wich is dynamic, depending on the entities you create, the is located under http://localhost:8080/api.
+There are two REST api's available in the project. One accessible under http://localhost:8080/manage with a alps descriptor [http://localhost:8080/manage/alps](http://localhost:8080/manage/alps). And another wich is dynamic, depending on the entities you create, the is located under http://localhost:8080/api.
 
 To try the REST api you can use curl and do something like this to create the dynamic entity :
 
@@ -55,9 +55,16 @@ Than create a instance of that entity:
 
 And that's it. You can see a list of instances of the "sample" entity with ```curl http://localhost:8080/api/sample``` or access a instance directly via its id with ```curl http://localhost:8080/api/sample/0```. 
 
+Contributing
+============
 
+[CONTRIBUTING](https://en.wikipedia.org/wiki/Open-source_movement).
 
-## The theme song
+License
+================
+[MIT License](http://en.wikipedia.org/wiki/MIT_License)
+
+## The Theme Song
 
 <a href="/CandyIggyPop.ogg?raw=true" target="_blank">Get the theme song...</a>
 
