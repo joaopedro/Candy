@@ -1,0 +1,23 @@
+<p>
+    <button type="button" class="btn">
+        <i class="glyphicon glyphicon-plus"></i>&nbsp;New {{entityName}} Row
+    </button>
+</p>
+
+<table datatable="ng" class="row-border hover">
+    <thead>
+    <tr>
+        <th ng-repeat="(key, value) in fields">{{key}}</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="element in elements">
+        <td ng-repeat="(key, value) in fields">{{element[key]}}</td>
+        <td>
+            <span class="glyphicon glyphicon-edit" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+        </td>
+    </tr>
+    </tbody>
+</table>

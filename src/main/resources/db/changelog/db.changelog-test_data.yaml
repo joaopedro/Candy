@@ -1,0 +1,135 @@
+databaseChangeLog:
+  - changeSet:
+      comment: Create the DefaultSample Structure, inserts for the definition tablets and create tables
+      id: 2
+      author: jpedro
+      changes:
+        - insert:
+            tableName: defined_entity
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: friendly_name
+                  value: DefaultSample
+              - column:
+                  name: physical_name
+                  value: cndy_defaultsample
+        - insert:
+            tableName: defined_entity_field
+            columns:
+              - column:
+                  name: friendly_name
+                  value: id
+              - column:
+                  name: physical_name
+                  value: cndy_fld_id
+              - column:
+                  name: type
+                  value: 1
+              - column:
+                  name: field_id
+                  value: true
+              - column:
+                  name: field_identity
+                  value: true
+              - column:
+                  name: defined_entity_id
+                  value: 1
+        - insert:
+            tableName: defined_entity_field
+            columns:
+              - column:
+                  name: friendly_name
+                  value: field1
+              - column:
+                  name: physical_name
+                  value: cndy_fld_field1
+              - column:
+                  name: type
+                  value: 1
+              - column:
+                  name: field_id
+                  value: false
+              - column:
+                  name: field_identity
+                  value: false
+              - column:
+                  name: defined_entity_id
+                  value: 1
+        - insert:
+            tableName: defined_entity_field
+            columns:
+              - column:
+                  name: friendly_name
+                  value: field2
+              - column:
+                  name: physical_name
+                  value: cndy_fld_field2
+              - column:
+                  name: type
+                  value: 0
+              - column:
+                  name: field_id
+                  value: false
+              - column:
+                  name: field_identity
+                  value: false
+              - column:
+                  name: defined_entity_id
+                  value: 1
+        - createTable:
+            comment: Sample data structure
+            tableName: cndy_defaultsample
+            columns:
+              - column:
+                  name: cndy_fld_id
+                  type: numeric
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: cndy_fld_field1
+                  type: numeric
+              - column:
+                  name: cndy_fld_field2
+                  type: varchar(100)
+              - column:
+                  name: cndy_active_
+                  type: char(1)
+                  defaultValue: S
+                  constraints:
+                    nullable: false
+        - insert:
+            tableName: cndy_defaultsample
+            columns:
+              - column:
+                  name: cndy_fld_field1
+                  value: 1
+              - column:
+                  name: cndy_fld_field2
+                  value: Value 1
+        - insert:
+            tableName: cndy_defaultsample
+            columns:
+              - column:
+                  name: cndy_fld_field1
+                  value: 2
+              - column:
+                  name: cndy_fld_field2
+                  value: Value 2
+        - insert:
+            tableName: cndy_defaultsample
+            columns:
+              - column:
+                  name: cndy_fld_field1
+                  value: 3
+              - column:
+                  name: cndy_fld_field2
+                  value: Value 3
+
+
+
+

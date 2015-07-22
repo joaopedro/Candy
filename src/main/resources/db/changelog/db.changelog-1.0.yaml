@@ -1,0 +1,72 @@
+databaseChangeLog:
+  - changeSet:
+      comment: Initial database structure
+      id: 1
+      author: jpedro
+      changes:
+        - createTable:
+            comment: To Hold the created table's definitions
+            tableName: defined_entity
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: friendly_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: physical_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+        - createTable:
+            comment: To Hold the created table fields definitions
+            tableName: defined_entity_field
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: friendly_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: physical_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: field_id
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: field_identity
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: defined_entity_id
+                  type: int
+              - addForeignKeyConstraint:
+                  baseColumnNames: defined_entity_id
+                  baseTableName: defined_entity_field
+                  constraintName: fk_entityfield_definedentity
+                  referencedColumnNames: id
+                  referencedTableName: defined_entity

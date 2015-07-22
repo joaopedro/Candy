@@ -1,0 +1,28 @@
+<p>
+    {{ 'Current version is v%VERSION%.' | interpolate }}
+</p>
+<p>
+    <button type="button" class="btn">
+        <i class="glyphicon glyphicon-plus"></i>&nbsp;New Entitity Definition
+    </button>
+</p>
+
+<table datatable="ng" class="row-border hover">
+    <thead>
+    <tr>
+        <th>Friendly Name</th>
+        <th>Phisical Name</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="entity in managedEntities">
+        <td>{{ entity.friendlyName }}</td>
+        <td>{{ entity.physicalName }}</td>
+        <td>
+            <span class="glyphicon glyphicon-edit" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+        </td>
+    </tr>
+    </tbody>
+</table>

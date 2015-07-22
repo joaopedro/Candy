@@ -1,0 +1,35 @@
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button> <a class="navbar-brand" href="#/welcome"><img style="max-width:100px; margin-top: -12px;" src="images/candy.png" alt="Candy Server"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <ul class="nav navbar-nav" >
+            <li>
+                <a href="#/manage">Entities Definition</a>
+            </li>
+            <li class="">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">DML on Entities<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li ng-repeat="entity in entities"><a ng-href="#/entity?name={{entity.friendlyName}}">{{entity.friendlyName}}</a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">Sign In</button>
+        </form>
+    </div>
+
+</nav>
