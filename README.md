@@ -1,7 +1,7 @@
 # Candy
 Candy is a Dynamic Entity REST API Generator
 
-The idea is that the generated endpoints will be proper REST endpoints, with a WAD for discovery and documentation and with ou without authentication (basic or ldap).
+The idea is that the generated endpoints will be proper REST endpoints, with a WAD for discovery and documentation and with or without authentication (basic or ldap).
 
 The UI will be web based and it will be used to define the entities and specify security methods.
 
@@ -33,7 +33,7 @@ Than go to the target directory run:
 
 And access the project from http://localhost:8080
 
-There are two REST api's available in the project. One accessible under http://localhost:8080/manage with a alps descriptor [http://localhost:8080/manage/alps](http://localhost:8080/manage/alps). And another wich is dynamic, depending on the entities you create, the is located under http://localhost:8080/api.
+There are two REST api's available in the project. One accessible under http://localhost:8080/manage with a alps descriptor [http://localhost:8080/manage/alps](http://localhost:8080/manage/alps). And another wich is dynamic, depending on the entities you create, there is located under http://localhost:8080/api.
 
 To try the REST api you can use curl and do something like this to create the dynamic entity :
 
