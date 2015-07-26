@@ -12,7 +12,7 @@ public class DefinedEntity {
 
 	private String friendlyName;
 	private String physicalName;
-
+    private boolean deleted=false;
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="defined_entity_id", referencedColumnName="id")
@@ -48,5 +48,13 @@ public class DefinedEntity {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
     }
 }

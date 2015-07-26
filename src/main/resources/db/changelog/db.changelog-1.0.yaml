@@ -25,6 +25,11 @@ databaseChangeLog:
                   type: varchar(100)
                   constraints:
                     nullable: false
+              - column:
+                  name: deleted
+                  type: boolean
+                  constraints:
+                    nullable: false
         - createTable:
             comment: To Hold the created table fields definitions
             tableName: defined_entity_field

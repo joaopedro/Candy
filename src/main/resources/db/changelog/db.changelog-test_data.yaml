@@ -16,6 +16,9 @@ databaseChangeLog:
               - column:
                   name: physical_name
                   value: cndy_defaultsample
+              - column:
+                  name: deleted
+                  value: false
         - insert:
             tableName: defined_entity_field
             columns:
