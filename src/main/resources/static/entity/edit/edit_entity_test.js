@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 describe('candyApp.entity module', function() {
 
@@ -13,4 +13,4 @@ describe('candyApp.entity module', function() {
     }));
 
   });
-});
+});*/

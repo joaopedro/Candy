@@ -1,7 +1,7 @@
 <p>
-    <button type="button" class="btn">
+    <a ng-href="#/entity/edit?name={{entityName}}" class="btn btn-default" role="button">
         <i class="glyphicon glyphicon-plus"></i>&nbsp;New {{entityName}} Row
-    </button>
+    </a>
 </p>
 
 <table datatable="ng" class="row-border hover">
@@ -15,8 +15,12 @@
     <tr ng-repeat="element in elements">
         <td ng-repeat="(key, value) in fields">{{element[key]}}</td>
         <td>
-            <span class="glyphicon glyphicon-edit" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
-            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+            <a ng-href="#/entity/edit?name={{entityName}}&id={{element.id}}" class="btn btn-default btn-xs" role="button" title="Edit">
+                <span class="glyphicon glyphicon-edit" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+            </a>
+            <button type="button" class="btn btn-default btn-xs" title="Delete" ng-click="deleteEntity(element.id)">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+            </button>
         </td>
     </tr>
     </tbody>

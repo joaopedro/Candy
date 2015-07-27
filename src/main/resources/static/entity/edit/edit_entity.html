@@ -1,23 +1,11 @@
-<p>
-    <button type="button" class="btn">
-        <i class="glyphicon glyphicon-plus"></i>&nbsp;New {{entityName}} Row
-    </button>
-</p>
+<form ng-controller="entityEditCtrl" ng-submit="submit()">
+    <p>Edit {{entityName}} {{entityId}}</p>
 
-<table datatable="ng" class="row-border hover">
-    <thead>
-    <tr>
-        <th ng-repeat="(key, value) in fields">{{key}}</th>
-        <th></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr ng-repeat="element in elements">
-        <td ng-repeat="(key, value) in fields">{{element[key]}}</td>
-        <td>
-            <span class="glyphicon glyphicon-edit" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
-            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
-        </td>
-    </tr>
-    </tbody>
-</table>
+    <div class="form-group" ng-repeat="(key, value) in element">
+        <label>{{key}}</label>
+        <input type="text" ng-model="element[key]" class="form-control"/>
+        <span id="helpBlock" class="help-block"></span>
+    </div>
+    <button type="submit" class="btn btn-default" title="Submit">Submit</button>
+    <a ng-href="#/entity?name={{entityName}}" class="btn btn-default" role="button" title="Cancel">Cancel</a>
+</form>

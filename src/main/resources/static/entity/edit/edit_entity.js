@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 angular.module('candyApp.entity', ['ngRoute'])
 
@@ -30,4 +30,4 @@ angular.module('candyApp.entity', ['ngRoute'])
 
         });
 
-    }]);
+    }]);*/
