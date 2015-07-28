@@ -18,7 +18,7 @@
             <a ng-href="#/entity/edit?name={{entityName}}&id={{element.id}}" class="btn btn-default btn-xs" role="button" title="Edit">
                 <span class="glyphicon glyphicon-edit" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
             </a>
-            <button type="button" class="btn btn-default btn-xs" title="Delete" ng-click="deleteEntity(element.id)">
+            <button type="button" class="btn btn-default btn-xs" title="Delete" ng-click="deleteEntity(element.id, $index)">
                 <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
             </button>
         </td>
