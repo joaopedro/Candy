@@ -13,6 +13,7 @@ angular.module('candyApp.entity', ['ngRoute'])
 
     .controller('entityCtrl', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
         $scope.entityName = $routeParams.name;
+
         var request = {
             method: 'GET',
             url: 'api/'+$scope.entityName,
@@ -32,7 +33,7 @@ angular.module('candyApp.entity', ['ngRoute'])
 
         });
 
-        $scope.deleteEntity = function(id){
+        $scope.deleteEntity = function(id, index){
             //TODO: use bootstrap modal
             var delConfirm = confirm('Delete '+$scope.entityName+' '+id+'?');
             if (delConfirm == true) {
@@ -44,9 +45,7 @@ angular.module('candyApp.entity', ['ngRoute'])
                 $http(request)
                 .success(function(response){
                     console.log(response);
-
-                    //TODO: refresh only the table
-                    location.reload();
+                    $scope.elements.splice(index, 1);
                 })
                 .error(function(response){
                     console.log(response);
@@ -56,6 +55,20 @@ angular.module('candyApp.entity', ['ngRoute'])
     }]).controller('entityEditCtrl', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
         $scope.entityName = $routeParams.name;
 
+        //get fields description
+        var request = {
+            method: 'GET',
+            url: 'manage/entity/',
+        };
+        $http(request).success(function (response) {
+            angular.forEach(response._embedded.entity, function (entity) {
+                if(entity.friendlyName == $scope.entityName){
+                    $scope.fieldsDefs = entity.fields;
+                }
+            });
+        });
+
+        //edit
         if(typeof $routeParams.id != "undefined"){
             $scope.entityId = $routeParams.id;
 
@@ -67,6 +80,7 @@ angular.module('candyApp.entity', ['ngRoute'])
                 $scope.element = response;
             });
         }
+        //create
         else{
             $scope.element = {};
 
