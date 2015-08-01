@@ -27,11 +27,10 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-        http.authorizeRequests().antMatchers("/**/*.js","/**/*.css","/**/*.html").permitAll();
-
-        String[] restEndpointsToSecure = { "api","manage"};
+        String[] restEndpointsToSecure = { "api", "manage"};
         for (String endpoint : restEndpointsToSecure) {
-            http.authorizeRequests().antMatchers("/" + endpoint + "/**").authenticated();
+            http.httpBasic().and().authorizeRequests().antMatchers("/" + endpoint + "/**")
+                .hasRole(CustomUserDetailsService.ROLE_USER);
         }
 
 

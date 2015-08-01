@@ -17,6 +17,8 @@ angular.module('candyApp', [
     .config(['$routeProvider','$httpProvider','$provide', function ($routeProvider, $httpProvider, $provide) {
         $routeProvider.otherwise({redirectTo: '/welcome'});
 
+        $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+
         $provide.factory('responseInterceptor', function($rootScope, $q, $location) {
             return {
                 // optional method
@@ -25,8 +27,8 @@ angular.module('candyApp', [
                     var config = rejection.config;
                     var method = config.method;
                     var url = config.url;
-
-                    if (status == 403) {
+                    debugger;
+                    if (status == 401) {
                         $location.path( "/login" );
                     } else {
                         $rootScope.error = method + " on " + url + " failed with status " + status;
