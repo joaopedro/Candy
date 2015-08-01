@@ -8,7 +8,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        <ul class="nav navbar-nav" >
+        <ul class="nav navbar-nav" ng-show="user">
             <li>
                 <a href="#/manage">Entities Definition</a>
             </li>
@@ -27,6 +27,11 @@
                 <ul class="dropdown-menu">
                     <li><a href="" ng-click="logout()">Logout</a></li>
                 </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-show="!user">
+            <li>
+                <a href="#/login">Login</a>
             </li>
         </ul>
     </div>

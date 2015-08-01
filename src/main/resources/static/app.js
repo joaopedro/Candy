@@ -55,19 +55,21 @@ angular.module('candyApp', [
             scope: {user: '='}, // This is one of the cool things :). Will be explained in post.
             templateUrl: "/header.html",
             controller: ['$rootScope', '$scope', '$filter', '$http', function ($rootScope, $scope, $filter, $http) {
-                var request = {
-                    method: 'GET',
-                    url: 'manage/entity',
-                };
-                $http(request).success(function (response) {
-                    $scope.entities = response._embedded.entity;
-                });
-                $scope.user = $rootScope.user;
-                $scope.logout = $rootScope.logout;
+                if($rootScope.user){
+                    var request = {
+                        method: 'GET',
+                        url: 'manage/entity',
+                    };
+                    $http(request).success(function (response) {
+                        $scope.entities = response._embedded.entity;
+                    });
+                    $scope.user = $rootScope.user;
+                    $scope.logout = $rootScope.logout;
+                }
             }]
         }
     })
-    .run(function($rootScope, $http, $location, $cookieStore, LoginService) {
+    .run(function($rootScope, $http, $location, $cookieStore, $window) {
         /* Reset error when a new view is loaded */
         $rootScope.$on('$viewContentLoaded', function() {
             delete $rootScope.error;
@@ -89,11 +91,11 @@ angular.module('candyApp', [
 
 
         $rootScope.logout = function() {
-            debugger;
             delete $rootScope.user;
             delete $http.defaults.headers.common[xAuthTokenHeaderName];
             $cookieStore.remove('user');
             $location.path("/login");
+            $window.location.reload();
         };
 
         /* Try getting valid user from cookie or go to login page */

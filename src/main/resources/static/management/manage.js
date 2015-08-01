@@ -4,7 +4,7 @@ angular.module('candyApp.manage', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/manage', {
-    templateUrl: 'manage/manage.html',
+    templateUrl: 'management/manage.html',
     controller: 'manageCtrl'
   });
 }])
