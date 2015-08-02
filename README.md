@@ -51,7 +51,7 @@ curl -X POST http://localhost:8080/manage/entity --header "Content-Type:applicat
 ```
 Than create a instance of that entity:
 
-```curl -X POST http://localhost:8080/api/sample --header "Content-Type:application/json" -d '{"field2": "value1", "field4": "value2"}'```
+```curl --user admin:admin -X POST http://localhost:8080/api/sample --header "Content-Type:application/json" -d '{"field2": "value1", "field4": "value2"}'```
 
 And that's it. You can see a list of instances of the "sample" entity with ```curl http://localhost:8080/api/sample``` or access a instance directly via its id with ```curl http://localhost:8080/api/sample/0```. 
 
