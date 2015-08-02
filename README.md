@@ -1,4 +1,6 @@
 # Candy
+
+[![Join the chat at https://gitter.im/joaopedro/Candy](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/joaopedro/Candy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Candy is a Dynamic Entity REST API Generator
 
 The idea is that the generated endpoints will be proper REST endpoints, with a WAD for discovery and documentation and with or without authentication (basic or ldap).
