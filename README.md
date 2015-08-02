@@ -8,6 +8,7 @@ The UI will be web based and it will be used to define the entities and specify 
 
 The first version will not be able to create relationships between entities but this will be done in versions further down the road...
 
+[![Join the chat at https://gitter.im/joaopedro/Candy](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/joaopedro/Candy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ## Why do this?
 
 I recently came to work for a company that used a opensource project called "SugarCRM" has a way to very quickly and with low costs setup a dynamic entity management backoffice with a rest and soap api.
@@ -57,7 +58,6 @@ Than create a instance of that entity:
 And that's it. You can see a list of instances of the "sample" entity with ```curl http://localhost:8080/api/sample``` or access a instance directly via its id with ```curl http://localhost:8080/api/sample/0```. 
 
 ##Contributing
-[![Join the chat at https://gitter.im/joaopedro/Candy](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/joaopedro/Candy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [CONTRIBUTING](https://en.wikipedia.org/wiki/Open-source_movement).
 
