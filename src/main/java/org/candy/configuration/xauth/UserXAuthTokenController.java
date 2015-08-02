@@ -1,10 +1,5 @@
 package org.candy.configuration.xauth;
 
-import java.security.Principal;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -18,13 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * This controller generates the token that must be present in subsequent REST
- * invocations.
- *
- * @author Philip W. Sorst (philip@sorst.net)
- * @author Josh Long (josh@joshlong.com)
- */
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 @RestController
 public class UserXAuthTokenController {
 
