@@ -14,13 +14,6 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-/**
- * Sifts through all incoming requests and installs a Spring Security principal
- * if a header corresponding to a valid user is found.
- *
- * @author Philip W. Sorst (philip@sorst.net)
- * @author Josh Long (josh@joshlong.com)
- */
 public class XAuthTokenFilter extends GenericFilterBean {
 
     private final UserDetailsService detailsService;
