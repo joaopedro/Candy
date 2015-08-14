@@ -34,23 +34,23 @@ angular.module('candyApp.entity', ['ngRoute'])
         });
 
         $scope.deleteEntity = function(id, index){
-            //TODO: use bootstrap modal
-            var delConfirm = confirm('Delete '+$scope.entityName+' '+id+'?');
-            if (delConfirm == true) {
-                var request = {
-                    method: 'DELETE',
-                    url: 'api/'+$scope.entityName+'/'+id
-                }
+            bootbox.confirm('Delete '+$scope.entityName+' '+id+'?', function(result) {
+                if (result) {
+                    var request = {
+                        method: 'DELETE',
+                        url: 'api/'+$scope.entityName+'/'+id
+                    }
 
-                $http(request)
-                .success(function(response){
-                    console.log(response);
-                    $scope.elements.splice(index, 1);
-                })
-                .error(function(response){
-                    console.log(response);
-                });
-            }
+                    $http(request)
+                    .success(function(response){
+                        console.log(response);
+                        $scope.elements.splice(index, 1);
+                    })
+                    .error(function(response){
+                        console.log(response);
+                    });
+                }
+            });
         }
     }]).controller('entityEditCtrl', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
         $scope.entityName = $routeParams.name;
