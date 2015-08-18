@@ -1,4 +1,4 @@
-# Candy       [![Circle CI](https://circleci.com/gh/joaopedro/Candy/tree/master.svg?style=svg&circle-token=b9dbd249084c6d57b84ef38429de738b7c5ffed6)](https://circleci.com/gh/joaopedro/Candy/tree/master)
+# Candy       [![Circle CI](https://circleci.com/gh/joaopedro/Candy/tree/master.svg?style=svg&circle-token=b9dbd249084c6d57b84ef38429de738b7c5ffed6)](https://circleci.com/gh/joaopedro/Candy/tree/master){:target="_blank"}
 
 Candy is a Dynamic Entity REST API Generator
 
