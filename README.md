@@ -1,4 +1,4 @@
-# Candy
+# Candy  [![Circle CI](https://circleci.com/gh/joaopedro/Candy/tree/master.svg?style=svg&circle-token=b9dbd249084c6d57b84ef38429de738b7c5ffed6)](https://circleci.com/gh/joaopedro/Candy/tree/master)
 
 Candy is a Dynamic Entity REST API Generator
 
@@ -7,10 +7,6 @@ The idea is that the generated endpoints will be proper REST endpoints, with a W
 The UI will be web based and it will be used to define the entities and specify security methods.
 
 The first version will not be able to create relationships between entities but this will be done in versions further down the road...
-
-[![Circle CI](https://circleci.com/gh/joaopedro/Candy/tree/master.svg?style=svg&circle-token=b9dbd249084c6d57b84ef38429de738b7c5ffed6)](https://circleci.com/gh/joaopedro/Candy/tree/master)
-
-[![Build Status](http://circleci-badges-max.herokuapp.com/img/joaopedro/Candy/master?token=b9dbd249084c6d57b84ef38429de738b7c5ffed6)](https://circleci.com/gh/joaopedro/Candy/tree/master)
 
 This is our current build status: https://circleci.com/gh/:owner/:repo/tree/:branch.png?circle-token=:circle-token
 
