@@ -1,5 +1,4 @@
-# Candy       [![Circle CI](https://circleci.com/gh/joaopedro/Candy/tree/develop.svg?style=svg&circle-token=b9dbd249084c6d57b84ef38429de738b7c5ffed6)](https://circleci.com/gh/joaopedro/Candy/tree/develop)
-
+# Candy        [![Circle CI](https://circleci.com/gh/joaopedro/Candy/tree/master.svg?style=svg&circle-token=b9dbd249084c6d57b84ef38429de738b7c5ffed6)](https://circleci.com/gh/joaopedro/Candy/tree/master)       [![Circle CI](https://circleci.com/gh/joaopedro/Candy/tree/develop.svg?style=svg&circle-token=b9dbd249084c6d57b84ef38429de738b7c5ffed6)](https://circleci.com/gh/joaopedro/Candy/tree/develop)
 Candy is a Dynamic Entity REST API Generator
 
 The idea is that the generated endpoints will be proper REST endpoints, with a WAD for discovery and documentation and with or without authentication (basic or ldap).
