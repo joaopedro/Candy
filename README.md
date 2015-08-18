@@ -8,6 +8,8 @@ The UI will be web based and it will be used to define the entities and specify 
 
 The first version will not be able to create relationships between entities but this will be done in versions further down the road...
 
+This is our current build status: https://circleci.com/gh/:owner/:repo/tree/:branch.png?circle-token=:circle-token
+
 [![Join the chat at https://gitter.im/joaopedro/Candy](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/joaopedro/Candy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ## Why do this?
 
