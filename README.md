@@ -8,7 +8,7 @@ The UI will be web based and it will be used to define the entities and specify 
 
 The first version will not be able to create relationships between entities but this will be done in versions further down the road...
 
-Here's our current build status: [![Circle CI](https://circleci.com/gh/joaopedro/Candy/tree/develop.svg?style=svg&circle-token=b9dbd249084c6d57b84ef38429de738b7c5ffed6)](https://circleci.com/gh/joaopedro/Candy/tree/develop)
+[![Circle CI](https://circleci.com/gh/joaopedro/Candy/tree/develop.svg?style=svg&circle-token=b9dbd249084c6d57b84ef38429de738b7c5ffed6)](https://circleci.com/gh/joaopedro/Candy/tree/develop)
 
 [![Join the chat at https://gitter.im/joaopedro/Candy](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/joaopedro/Candy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ## Why do this?
