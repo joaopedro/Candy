@@ -13,6 +13,7 @@
     "angular-mocks": "~1.4.0",
     "angular-datatables": "~0.4.3",
     "html5-boilerplate": "~5.2.0",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "bootbox-master": "~4.4.0"
   }
 }
