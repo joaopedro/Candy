@@ -7,10 +7,11 @@ var app = angular.module('candyApp', [
     'ngRoute',
     'ngCookies',
     'datatables',
-    'candyApp.services',
     'candyApp.login',
+    'candyApp.login.services',
     'candyApp.welcome',
-    'candyApp.entity',
+    'candyApp.entity.list',
+    'candyApp.entity.edit',
     'candyApp.manage',
     'candyApp.version'
 ])

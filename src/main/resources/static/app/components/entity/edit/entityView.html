@@ -1,4 +1,4 @@
-<form ng-controller="entityEditCtrl" ng-submit="submit()">
+<form ng-submit="submit()">
     <div ng-switch on="entityId || 'null'">
         <p ng-switch-when="null">Create new {{entityName}}</p>
         <p ng-switch-default>Edit {{entityName}} {{entityId}}</p>

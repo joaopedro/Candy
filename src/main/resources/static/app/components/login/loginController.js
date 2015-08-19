@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('candyApp.login', ['ngRoute', 'candyApp.services'])
+var loginModule = angular.module('candyApp.login', ['ngRoute', 'candyApp.login.services'])
 .controller('LoginController', ['$scope', '$rootScope', '$location','$http', '$cookieStore', '$window', 'LoginService',
         function ($scope, $rootScope, $location, $http, $cookieStore, $window, LoginService) {
             $scope.login = function() {
