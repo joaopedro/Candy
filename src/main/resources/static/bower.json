@@ -1,19 +1,20 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "name": "candy",
+  "description": "Dynamic Entity REST API Generator",
+  "version": "0.0.1",
+  "homepage": "https://github.com/joaopedro/Candy",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "angular": "~1.4.0",
     "angular-route": "~1.4.0",
+    "angular-cookies": "~1.4.0",
     "angular-resource": "~1.4.0",
     "angular-loader": "~1.4.0",
     "angular-mocks": "~1.4.0",
     "angular-datatables": "~0.4.3",
     "html5-boilerplate": "~5.2.0",
     "bootstrap": "~3.3.5",
-    "bootbox-master": "~4.4.0"
+    "bootbox": "~4.4.0"
   }
 }

@@ -14,14 +14,14 @@
     <title>My AngularJS App</title>
     <meta name="description" content="Candy Front-End">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-    <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="assets/libs/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="assets/libs/datatables/media/css/jquery.dataTables.min.css">
 
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="assets/css/app.css">
 
-    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="assets/libs/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
 
@@ -43,22 +43,27 @@
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-datatables/dist/angular-datatables.min.js"></script>
-<script src="bower_components/angular-route/angular-route.min.js"></script>
-<script src="bower_components/angular-resource/angular-resource.min.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="bower_components/bootbox-master/bootbox.js"></script>
-<script src="app.js"></script>
-<script src="welcome/welcome.js"></script>
-<script src="entity/list/entity.js"></script>
-<script src="management/manage.js"></script>
-<script src="login/login.js"></script>
-<script src="components/version/version.js"></script>
-<script src="components/version/version-directive.js"></script>
-<script src="components/version/interpolate-filter.js"></script>
+<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="assets/libs/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="assets/libs/angular/angular.min.js"></script>
+<script src="assets/libs/angular-datatables/dist/angular-datatables.min.js"></script>
+<script src="assets/libs/angular-route/angular-route.min.js"></script>
+<script src="assets/libs/angular-resource/angular-resource.min.js"></script>
+<script src="assets/libs/angular-cookies/angular-cookies.min.js"></script>
+<script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/libs/bootbox/bootbox.js"></script>
+<script src="app/components/welcome/welcomeController.js"></script>
+<script src="app/components/entity/list/entityController.js"></script>
+<script src="app/components/entity/edit/entityController.js"></script>
+<script src="app/components/management/manageController.js"></script>
+<script src="app/components/login/loginController.js"></script>
+<script src="app/components/login/loginService.js"></script>
+<script src="app/components/version/version.js"></script>
+<script src="app/components/version/version-directive.js"></script>
+<script src="app/components/version/interpolate-filter.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/app.routes.js"></script>
+<script src="app/shared/footer/footerDirective.js"></script>
+<script src="app/shared/header/headerDirective.js"></script>
 </body>
 </html>
