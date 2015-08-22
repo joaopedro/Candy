@@ -8,7 +8,8 @@ angular.module('candyApp.login', ['ngRoute', 'candyApp.login.services'])
                     $rootScope.user = user;
                     $http.defaults.headers.common[ xAuthTokenHeaderName ] = user.token;
                     $cookieStore.put('user', user);
-
+                    $location.path("/");
+                    $window.location.reload();
                 });
             };
 
