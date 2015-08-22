@@ -4,11 +4,11 @@ app.directive('header', function () {
         replace: true,
         scope: {user: '='}, // This is one of the cool things :). Will be explained in post.
         templateUrl: "/app/shared/header/headerView.html",
-        controller: ['$rootScope', '$scope', '$filter', '$http', function ($rootScope, $scope, $filter, $http) {
+        controller: ['$rootScope', '$scope', '$filter', '$http', 'configs', function ($rootScope, $scope, $filter, $http, configs) {
             if($rootScope.user){
                 var request = {
                     method: 'GET',
-                    url: 'manage/entity',
+                    url: configs.api.basePath+ 'manage/entity',
                 };
                 $http(request).success(function (response) {
                     $scope.entities = response._embedded.entity;

@@ -26,7 +26,6 @@ var app = angular.module('candyApp', [
                     var config = rejection.config;
                     var method = config.method;
                     var url = config.url;
-                    debugger;
                     if (status == 401) {
                         $location.path("/login");
                     } else {
