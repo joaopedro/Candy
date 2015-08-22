@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('candyApp.entity.list', ['ngRoute'])
-    .controller('ListEntidadeController', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
+    .controller('ListEntidadeController', ['$scope', '$http', '$routeParams', 'configs', function ($scope, $http, $routeParams, configs) {
         $scope.entityName = $routeParams.name;
 
         var request = {
             method: 'GET',
-            url: 'api/'+$scope.entityName,
+            url: configs.api.basePath+ 'api/'+$scope.entityName,
         };
         $http(request).success(function (response) {
             $scope.elements = response;
@@ -28,7 +28,7 @@ angular.module('candyApp.entity.list', ['ngRoute'])
                 if (result) {
                     var request = {
                         method: 'DELETE',
-                        url: 'api/'+$scope.entityName+'/'+id
+                        url: configs.api.basePath+'api/'+$scope.entityName+'/'+id
                     }
 
                     $http(request)

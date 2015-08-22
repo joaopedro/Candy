@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('candyApp.entity.edit', ['ngRoute'])
-    .controller('EditEntidadeController', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
+    .controller('EditEntidadeController', ['$scope', '$http', '$routeParams', 'configs', function ($scope, $http, $routeParams, configs) {
         $scope.entityName = $routeParams.name;
 
         //get fields description
         var request = {
             method: 'GET',
-            url: 'manage/entity/',
+            url: configs.api.basePath+'manage/entity/',
         };
         $http(request).success(function (response) {
             angular.forEach(response._embedded.entity, function (entity) {
@@ -23,7 +23,7 @@ angular.module('candyApp.entity.edit', ['ngRoute'])
 
             var request = {
                 method: 'GET',
-                url: 'api/' + $scope.entityName + '/' + $scope.entityId,
+                url: configs.api.basePath+'api/' + $scope.entityName + '/' + $scope.entityId,
             };
             $http(request).success(function (response) {
                 $scope.element = response;
@@ -35,7 +35,7 @@ angular.module('candyApp.entity.edit', ['ngRoute'])
 
             var request = {
                 method: 'GET',
-                url: 'manage/entity',
+                url: configs.api.basePath+'manage/entity',
             };
             $http(request).success(function (response) {
                 angular.forEach(response._embedded.entity, function (item) {
@@ -56,7 +56,7 @@ angular.module('candyApp.entity.edit', ['ngRoute'])
 
             var request = {
                 method: 'POST',
-                url: url,
+                url: configs.api.basePath+url,
                 headers: {
                     'Content-Type': 'application/json'
                 },
