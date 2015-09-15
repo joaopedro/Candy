@@ -12,7 +12,8 @@ var app = angular.module('candyApp', [
     'candyApp.welcome',
     'candyApp.entity.list',
     'candyApp.entity.edit',
-    'candyApp.manage',
+    'candyApp.manage.list',
+	'candyApp.manage.edit',
     'candyApp.version'
 ])
     .config(['$routeProvider', '$httpProvider', '$provide', function ($routeProvider, $httpProvider, $provide) {

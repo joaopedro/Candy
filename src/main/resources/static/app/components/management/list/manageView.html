@@ -2,9 +2,9 @@
     {{ 'Current version is v%VERSION%.' | interpolate }}
 </p>
 <p>
-    <button type="button" class="btn">
+    <a ng-href="#/manage/edit" class="btn btn-default" role="button">
         <i class="glyphicon glyphicon-plus"></i>&nbsp;New Entitity Definition
-    </button>
+    </a>
 </p>
 
 <table datatable="ng" class="row-border hover">
@@ -20,7 +20,9 @@
         <td>{{ entity.friendlyName }}</td>
         <td>{{ entity.physicalName }}</td>
         <td>
-            <span class="glyphicon glyphicon-edit" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+			<a ng-href="#/manage/edit?entityHref={{entity._links.self.href}}" class="btn btn-default btn-xs" role="button" title="Edit">
+				<span class="glyphicon glyphicon-edit" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+			</a>
             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
         </td>
     </tr>

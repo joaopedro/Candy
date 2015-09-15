@@ -17,8 +17,12 @@ app.config(['$routeProvider', function ($routeProvider) {
                 controller: 'EditEntidadeController',
                 controllerAs: 'editEntidadeCtrl'})
             .when('/manage', {
-                templateUrl: '/app/components/management/manageView.html',
-                controller: 'ManagerController',
-                controllerAs: 'manageCtrl'})
+                templateUrl: '/app/components/management/list/manageView.html',
+                controller: 'ListManagerController',
+                controllerAs: 'listManageCtrl'})
+            .when('/manage/edit', {
+                templateUrl: '/app/components/management/edit/manageView.html',
+                controller: 'EditManagerController',
+                controllerAs: 'editManageCtrl'})
             .otherwise({redirectTo: '/welcome'});
     }]);

@@ -1,0 +1,55 @@
+<form ng-submit="submit()">
+    <div ng-switch on="entity.friendlyName || 'null'">
+        <p ng-switch-when="null">Create new Entity</p>
+        <p ng-switch-default>Edit {{entity.friendlyName}}</p>
+    </div>
+	
+	<div class="form-group">
+		<label>Friendly Name</label>
+		<input type="text" ng-model="entity.friendlyName" class="form-control">
+		<p class="help-block">Please enter the entity friendly name</p>
+	</div>
+	
+	<div class="form-group">
+		<label>Physical Name</label>
+		<input type="text" ng-model="entity.physicalName" class="form-control">
+		<p class="help-block">Please enter the entity Physical Name</p>
+	</div>
+	
+	<div class="form-group">
+		<label>Fields</label>
+	
+		<div class="row">
+			<div class="col-md-3">Friendly Name</div>
+			<div class="col-md-3">Physical Name</div>
+			<div class="col-md-3">Type</div>
+			<div class="col-md-1">ID</div>
+			<div class="col-md-1">Identity</div>
+			<div class="col-md-1">Remove</div>
+		</div>
+
+		<div class="row" ng-repeat="field in entity.fields">		
+			<div class="col-md-3">
+				<input type="text" ng-model="field.friendlyName" class="form-control">		
+			</div>
+			<div class="col-md-3">
+				<input type="text" ng-model="field.physicalName" class="form-control">
+			</div>
+			<div class="col-md-3">
+				<input type="text" ng-model="field.type" class="form-control">
+			</div>
+			<div class="col-md-1">
+				<input type="radio" name="fieldId" ng-model="field.fieldId" ng-value="field.fieldId">
+			</div>
+			<div class="col-md-1">
+				<input type="radio" name="fieldIdentity" ng-model="field.fieldIdentity" ng-value="field.fieldIdentity">
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+		</div>
+	</div>
+    
+	<button type="submit" class="btn btn-primary" title="Submit">Submit</button>
+    <a ng-href="#/manage" class="btn btn-default" role="button" title="Cancel">Cancel</a>
+</form>
