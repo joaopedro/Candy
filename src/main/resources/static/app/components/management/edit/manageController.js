@@ -18,33 +18,65 @@ angular.module('candyApp.manage.edit', [])
 			friendlyName: null,
 			physicalName: null,
 			deleted: false,
-			fields: []
+			fields: [{
+				friendlyName: null,
+				physicalName: null,
+				type: "STRING",
+				fieldId: false,
+				fieldIdentity: false
+			}]
 		};
 	}
 	
+	$scope.addField = function () {
+		console.log("addField");
+		var field = {
+			friendlyName: null,
+			physicalName: null,
+			type: "STRING",
+			fieldId: false,
+			fieldIdentity: false
+		}
+		
+		$scope.entity.fields.push(field);
+	};
+	
+	$scope.removeField = function (index) {		
+		bootbox.confirm('Delete field?', function(result) {
+			if (result) {
+				$scope.entity.fields.splice(index, 1);
+				
+				$scope.$apply();
+			}
+		});
+	};
+	
 	$scope.submit = function (form) {
-		/*var url = 'api/' + $scope.entityName;
-		if (typeof $routeParams.id != "undefined") {
-			url += '/' + $scope.entityId;
+		var url;
+		if (typeof $routeParams.entityHref != "undefined") {
+			url = $routeParams.entityHref;			
+		}
+		else{
+			url = configs.api.basePath+'manage/entity';			
 		}
 
 		var request = {
 			method: 'POST',
-			url: configs.api.basePath+url,
+			url: url,
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			data: $scope.element
+			data: $scope.entity
 		}
 
 		$http(request)
 			.success(function (response) {
 				console.log(response);
 
-				window.location.href = "#/entity?name=" + $scope.entityName;
+				window.location.href = "#/manage";
 			})
 			.error(function (response) {
 				console.log(response);
-			});*/
+			});
 	};
 }]);

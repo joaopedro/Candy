@@ -23,7 +23,9 @@
 			<a ng-href="#/manage/edit?entityHref={{entity._links.self.href}}" class="btn btn-default btn-xs" role="button" title="Edit">
 				<span class="glyphicon glyphicon-edit" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
 			</a>
-            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+            <button type="button" class="btn btn-default btn-xs" title="Delete" ng-click="deleteEntity(entity.friendlyName, entity._links.self.href, $index)">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+            </button>
         </td>
     </tr>
     </tbody>

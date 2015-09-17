@@ -18,8 +18,12 @@
 	
 	<div class="form-group">
 		<label>Fields</label>
+		
+		<button type="button" class="btn btn-primary btn-xs" title="Add Field" ng-click="addField()">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+		</button>
 	
-		<div class="row">
+		<div class="row manage-fields-grid-header">
 			<div class="col-md-3">Friendly Name</div>
 			<div class="col-md-3">Physical Name</div>
 			<div class="col-md-3">Type</div>
@@ -28,7 +32,7 @@
 			<div class="col-md-1">Remove</div>
 		</div>
 
-		<div class="row" ng-repeat="field in entity.fields">		
+		<div class="row manage-fields-grid-row" ng-repeat="field in entity.fields">		
 			<div class="col-md-3">
 				<input type="text" ng-model="field.friendlyName" class="form-control">		
 			</div>
@@ -36,16 +40,21 @@
 				<input type="text" ng-model="field.physicalName" class="form-control">
 			</div>
 			<div class="col-md-3">
-				<input type="text" ng-model="field.type" class="form-control">
+				<select class="form-control" ng-model="field.type">
+				  <option>STRING</option>
+				  <option>NUMBER</option>
+				</select>				
 			</div>
 			<div class="col-md-1">
-				<input type="radio" name="fieldId" ng-model="field.fieldId" ng-value="field.fieldId">
+				<input type="radio" name="fieldId" ng-model="field.fieldId" ng-value="true">
 			</div>
 			<div class="col-md-1">
-				<input type="radio" name="fieldIdentity" ng-model="field.fieldIdentity" ng-value="field.fieldIdentity">
+				<input type="radio" name="fieldIdentity" ng-model="field.fieldIdentity" ng-value="true">
 			</div>
 			<div class="col-md-1">
-			
+				<button type="button" class="btn btn-default btn-xs" title="Delete" ng-click="removeField($index)">
+					<span class="glyphicon glyphicon-trash" aria-hidden="true" style="cursor: pointer; cursor: hand;"></span>
+				</button>
 			</div>
 		</div>
 	</div>

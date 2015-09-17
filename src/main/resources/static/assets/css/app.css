@@ -8,3 +8,17 @@
    height: 20px;
    background-color: #f5f5f5;
  }
+ 
+.manage-fields-grid-header, .manage-fields-grid-row  {
+	margin: 0px;
+}
+
+.manage-fields-grid-header > div {
+	text-align: center;	
+}
+
+.manage-fields-grid-row > div {
+	border-top: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+ }
